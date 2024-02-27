@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h3 Enter new message below 
+    h3 Go back to 
+        a(href="/") home
+    form.newMessageForm(action="/new", method="post")
+        div.inputs
+            input#name(type="text", name="name", required, placeholder="Enter Your Name")
+            input#message(type="text" name="message", required,placeholder="Enter Message") 
+        div.submitButton
+            button(type="submit") Add Message 
+

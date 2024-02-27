@@ -1,0 +1,16 @@
+extends layout
+
+
+
+block content
+  div.wholeContent
+    h1 Message Board
+    h3 Create a new 
+      a(href="/new") Message  
+    for message in messages
+      div.messageBoard
+        div.messageUser
+          p.user= message.user
+          p.message= message.text 
+        div.dateDiv
+          p.date= "on: " + message.added 
